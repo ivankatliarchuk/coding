@@ -1,4 +1,4 @@
-define(function() { 
+define(function() {
   QUnit.start();
   /*
     ======== A Handy Little QUnit Reference ========

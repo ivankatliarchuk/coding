@@ -33,3 +33,6 @@ npm-debug.log
 
 bower_components/
 /app/gruntautomation/gruntautomation.iml
+/features_report.html
+features_report.html
+features_report.html.json
