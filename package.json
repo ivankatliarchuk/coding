@@ -1,26 +1,33 @@
 {
   "name": "ivanka-web-development",
-  "version": "0.0.1",
-  "description": "Java Script, Node.JS, Angular  challanges",
-  "main": "code",
-  "scripts": {
-    "test": "grunt Hello"
+  "description": "code camper different projects",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">= 0.8.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tanzwud/coding.git"
+  "scripts": {
+    "test": "grunt qunit"
   },
   "keywords": [
     "js",
     "node",
     "angular"
   ],
-  "author": "Ivan Ka",
-  "license": "UNLICENSED",
+  "author": {
+    "name": "Ivan Ka",
+    "email": "email@domain.com",
+    "url": "https://uk.linkedin.com/in/ivankatliarchuk"
+  },
   "bugs": {
     "url": "https://github.com/tanzwud/coding/issues"
   },
   "homepage": "https://github.com/tanzwud/coding#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://mit-license.org"
+    }
+  ],
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
