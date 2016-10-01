@@ -48,10 +48,5 @@
     "grunt-cucumberjs": "^0.10.7",
     "karma": "^1.3.0",
     "qunitjs": "^2.0.1"
-  },
-  "bin": {
-    "cucumber.js": "./bin/cucumber.js",
-    "cucumber-js": "./bin/cucumber.js",
-    "cucumberjs": "./bin/cucumber.js"
   }
 }
