@@ -19,7 +19,6 @@ war/WEB-INF/classes/
 .gwt/
 
 #caching for already compiled files
-gwt-unitCache/
 
 #gwt junit compilation files
 www-test/
@@ -27,6 +26,6 @@ www-test/
 #old GWT (1.5) created this dir
 .gwt-tmp/
 .idea/
-/.idea/
-/node_modules/
 node_modules/
+/npm-debug.log
+npm-debug.log
