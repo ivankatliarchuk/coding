@@ -29,3 +29,6 @@ www-test/
 node_modules/
 /npm-debug.log
 npm-debug.log
+/gruntautomation/gruntautomation.iml
+
+bower_components/
