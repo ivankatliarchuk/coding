@@ -28,3 +28,5 @@ www-test/
 .gwt-tmp/
 .idea/
 /.idea/
+/node_modules/
+node_modules/
