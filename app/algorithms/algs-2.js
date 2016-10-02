@@ -1,43 +1,49 @@
-sumall = [
-  {array: [1, 4], result : 10},
-  {array: [5, 10], result : 45},
-  {array: [10, 5], result : 45}
-];
-
-QUnit
-  .test('summ all numbers', function (assert) {
-    sumall.forEach(function (item) {
-      assert.deepEqual(sumAll(item.array), item.result, 'fail');
-    });
+function sumAll(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
   });
+  count = 0;
+  for (var i = arr[0]; i <= arr[1]; i++) {
+    count += i;
+  }
+  return count;
+}
 
-diffarrays = [
-  {arrayf: [1, 2, 3, 5], arrays: [1, 2, 3, 4, 5], result : [4]},
-  {arrayf: ["andesite", "grass", "dirt", "dead shrub"], arrays: ["andesite", "grass", "dirt", "dead shrub"], result : []},
-  {arrayf: [], arrays: ["snuffleupagus", "cookie monster", "elmo"], result : ["snuffleupagus", "cookie monster", "elmo"]},
-];
-
-QUnit
-  .test('diff arrays', function (assert) {
-    diffarrays.forEach(function (item) {
-      assert.deepEqual(diffArray(item.arrayf, item.arrays), item.result, 'fail');
-    });
+/**
+ * method to return symmetrict difference of two array.
+ * @param arr1
+ * @param arr2
+ * @returns {Array}
+ */
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  // Same, same; but different.
+  concatArrays = arr1.concat(arr2).sort(function (a, b) {
+    return a - b;
   });
+  for (var i = 0; i < concatArrays.length; i++) {
+    for (var z = concatArrays.length - 1; z > -1; z--) {
+      if (concatArrays[i] === concatArrays[z] && i !== z) {
+        break;
+      } else if (z === 0) {
+        newArr.push(concatArrays[i]);
+      }
+    }
+  }
 
-telephons = [
-  {number: '1 555-555-5555',  result : true},
-  {number: '1 555-555-5555',  result : true},
-  {number: '555-555-5555',  result : true},
-  {number: '(555) 555-5555',  result : true},
-  {number: '5555555555',  result : true},
-  {number: '1 555 555 5555',  result : true},
-  {number: '555-5555',  result : false},
-  {number: '1 555)555-5555',  result : false},
-];
+  return newArr;
+}
 
-QUnit
-  .test('diff arrays', function (assert) {
-    telephons.forEach(function (item) {
-      assert.deepEqual(telephoneCheck(item.number), item.result, item.number);
-    });
-  });
+function telephoneCheck(str) {
+  // Good luck!
+  // test
+  var regex = /((1 |)(\(\d{3}\)|\d{3})(-| |)\d{3}(-| |)\d{3,4})/g;
+  var patt = new RegExp(regex);
+  var res = patt.test(str);
+  if (res) {
+    return true;
+  }
+
+  return false;
+}
+
