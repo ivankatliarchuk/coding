@@ -37,19 +37,11 @@ function diffArray(arr1, arr2) {
 function telephoneCheck(str) {
   // Good luck!
   // test
-  var regex = /[^1\s|\d{3}\-\d{3}\-\d+{3}]/;
+  var regex = /((1 |)(\(\d{3}\)|\d{3})(-| |)\d{3}(-| |)\d{3,4})/g;
   var patt = new RegExp(regex);
   var res = patt.test(str);
-  console.log(str + " -->" + res);
-  sanitized = str.replace(/[- ()]/g, '');
-  // console.log(sanitized);
-  if (sanitized.length === 10 || sanitized.length === 11) {
+  if (res) {
     return true;
-  }
-  leftB = str.indexOf("(");
-  rightB = str.indexOf(")");
-  if ((rightB !== -1 && leftB === -1) || (rightB === -1 && leftB !== -1) ||(rightB - leftB !== 3)) {
-   // return false;
   }
 
   return false;
