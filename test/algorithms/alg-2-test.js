@@ -25,20 +25,50 @@ QUnit
     });
   });
 
-telephons = [
-  {number: '1 555-555-5555',  result : true},
-  {number: '1 555-555-5555',  result : true},
-  {number: '555-555-5555',  result : true},
-  {number: '(555) 555-5555',  result : true},
-  {number: '5555555555',  result : true},
-  {number: '1 555 555 5555',  result : true},
-  {number: '555-5555',  result : false},
-  {number: '1 555)555-5555',  result : false},
+sumdiff = [
+  {first: [1, 2, 4], second: [3, 6], third: [], result : [1, 2, 3, 4, 6]},
+  //{first: [1, 2, 5], second: [2, 3, 5], third: [3, 4, 5],  result : [1, 4, 5]},
 ];
 
 QUnit
-  .test('diff arrays', function (assert) {
-    telephons.forEach(function (item) {
-      assert.deepEqual(telephoneCheck(item.number), item.result, item.number);
+  .test('symmetric difference', function (assert) {
+    sumdiff.forEach(function (item) {
+      assert.deepEqual(sym(item.first, item.second, item.third), item.result, item.first);
     });
+
+  });
+
+romannumbers = [
+  {input: 2, result: 'II'},
+  {input: 3, result: 'III'},
+  {input: 5, result: 'V'},
+  {input: 9, result: 'IX'},
+  {input: 12, result: 'XII'},
+  {input: 16, result: 'XVI'},
+  {input: 29, result: 'XXIX'},
+  {input: 44, result: 'XLIV'},
+  {input: 45, result: 'XLV'},
+  {input: 68, result: 'LXVIII'},
+  {input: 83, result: 'LXXXIII'},
+  {input: 97, result: 'XCVII'},
+  {input: 99, result: 'XCIX'},
+  {input: 500, result: 'D'},
+  {input: 501, result: 'DI'},
+  {input: 649, result: 'DCXLIX'},
+  {input: 798, result: 'DCCXCVIII'},
+  {input: 891, result: 'DCCCXCI'},
+  {input: 1000, result: 'M'},
+  {input: 1004, result: 'MIV'},
+  {input: 1006, result: 'MVI'},
+  {input: 1023, result: 'MXXIII'},
+  {input: 2014, result: 'MMXIV'},
+  {input: 3999, result: 'MMMCMXCIX'}
+];
+
+QUnit
+  .test('roman numbers', function (assert) {
+    romannumbers.forEach(function (item) {
+      assert.equal(convertToRoman(item.input), item.result, item.input);
+    });
+
   });

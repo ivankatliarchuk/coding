@@ -37,13 +37,73 @@ function diffArray(arr1, arr2) {
 function telephoneCheck(str) {
   // Good luck!
   // test
-  var regex = /((1 |)(\(\d{3}\)|\d{3})(-| |)\d{3}(-| |)\d{3,4})/g;
+  var regex = /(1|1 |)(\(\d{3}\)|\d{3})(-| |)\d{3}(-| |)\d{3,4}/;
   var patt = new RegExp(regex);
-  var res = patt.test(str);
-  if (res) {
-    return true;
-  }
+  var res = str.match(regex);
 
+  if (res !== null) {
+    if (str === res[0]) {
+      return true;
+    }
+  }
   return false;
 }
 
+/**
+ * symmetric differences
+ * @param args
+ * @returns {*}
+ */
+function sym(args) {
+
+  array = [];
+  for (var i = 0; i < arguments.length; i++) {
+    for (var z = 0; z < arguments[i].length; z++) {
+      array.push(arguments[i][z]);
+    }
+  }
+  array.sort(function (a, b) {
+    return a - b;
+  }); // may not even needed
+  for (var i = 0; i < array.length; i++) {
+
+  }
+  return array;
+}
+
+greek = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 90, 100, 500, 900, 1000];
+roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
+  // 10 - 50
+  'X', 'XX', 'XXX', 'XL', 'L', 'XC',
+  // 100 +
+  'C', 'D', 'CM', 'M'];
+// roman numbers
+function convertToRoman(num) {
+  prev = 0;
+  current = 0;
+  for (var i = 0; i < greek.length; i++) {
+    current = greek[i];
+    if (current === num) {
+      return roman[i];
+    } else if (i === greek.length - 1) { // hit last one
+      return hitRange(num, prev, current);
+    } else if (num < current) { // find range
+      return hitRange(num, prev, current);
+    }
+    prev = current;
+  }
+
+  return num;
+}
+/**
+ * function to find number, when range is known.
+ */
+function hitRange(num, min, max) {
+  if (num < max) { // first case
+    number = num - min;
+    return convertToRoman(min) + convertToRoman(number);
+  } else {
+    number = num - max;
+    return convertToRoman(max) + convertToRoman(number);
+  }
+}
