@@ -107,3 +107,18 @@ function hitRange(num, min, max) {
     return convertToRoman(max) + convertToRoman(number);
   }
 }
+
+// missing letters
+function fearNotLetter(str) {
+  prev = 0;
+  found = undefined;
+  for (var i = 0; i < str.length; i++) {
+    index = str.charCodeAt(i);
+    if (index - prev > 1 && i > 0) {
+      found = String.fromCharCode(prev + 1);
+      break;
+    }
+    prev = index;
+  }
+  return found;
+}

@@ -72,3 +72,17 @@ QUnit
     });
 
   });
+
+lettersmissing = [
+  {input: 'abce', result: 'd'},
+  {input: 'abcdefghjklmno', result: 'i'},
+  {input: 'bcd', result: undefined},
+  {input: 'yz', result: undefined},
+];
+QUnit
+  .test('missing letters', function (assert) {
+    lettersmissing.forEach(function (item) {
+      assert.equal(fearNotLetter(item.input), item.result, item.input);
+    });
+
+  });
