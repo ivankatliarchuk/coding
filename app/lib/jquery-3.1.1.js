@@ -2564,7 +2564,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				}
 			}
 
-			// `i` is now the count of elements visited above, and adding it to `matchedCount`
+			// `i` is now the index of elements visited above, and adding it to `matchedCount`
 			// makes the latter nonnegative.
 			matchedCount += i;
 
@@ -3788,10 +3788,10 @@ jQuery.extend( {
 	when: function( singleValue ) {
 		var
 
-			// count of uncompleted subordinates
+			// index of uncompleted subordinates
 			remaining = arguments.length,
 
-			// count of unprocessed arguments
+			// index of unprocessed arguments
 			i = remaining,
 
 			// subordinate fulfillment data
@@ -4457,7 +4457,7 @@ jQuery.fn.extend( {
 			elements = this,
 			i = this.length,
 			resolve = function() {
-				if ( !( --count ) ) {
+				if ( !( --index ) ) {
 					defer.resolveWith( elements, [ elements ] );
 				}
 			};
@@ -4471,7 +4471,7 @@ jQuery.fn.extend( {
 		while ( i-- ) {
 			tmp = dataPriv.get( elements[ i ], type + "queueHooks" );
 			if ( tmp && tmp.empty ) {
-				count++;
+				index++;
 				tmp.empty.add( resolve );
 			}
 		}
