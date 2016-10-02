@@ -122,3 +122,23 @@ function fearNotLetter(str) {
   }
   return found;
 }
+
+
+// http://forum.kerbalspaceprogram.com/index.php?/topic/59966-how-to-calculate-altitude-for-a-given-orbital-period-amp-vice-versa/
+/**
+ * function to return orbital periods
+ * @param arr
+ * @returns {*}
+ */
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var p = 3.14;
+
+  for (var i = 0; i < arr.length; i++) {
+    avgAlt = arr[i]['avgAlt'];
+    console.log(avgAlt);
+  }
+
+  return arr;
+}

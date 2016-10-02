@@ -86,3 +86,14 @@ QUnit
     });
 
   });
+
+orbitalperiods = [
+  {input: [{name : "sputnik", avgAlt : 35873.5553}], result: [{name : "sputnik", orbitalPeriod : 86400}]}
+];
+QUnit
+  .test('orbital periods', function (assert) {
+    orbitalperiods.forEach(function (item) {
+      assert.equal(orbitalPeriod(item.input), item.result, item.input);
+    });
+
+  });
