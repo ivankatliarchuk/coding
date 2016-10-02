@@ -4,10 +4,10 @@ function chunkArrayInGroups(arr, size) {
 
   num = arr.length / size;
 
-  for (var i = 0, count = 0; i < num, count < arr.length; i++) {
+  for (var i = 0, count = 0; i < num, index < arr.length; i++) {
     temp = [];
     for (var n = 0; n < size; n++) {
-      item = arr[count++];
+      item = arr[index++];
       if (item !== undefined)
       temp.push(item);
     }
