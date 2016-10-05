@@ -158,3 +158,34 @@ function sumPrimes1(num) {
   console.log(arrayOfPrimes);
   return sum_;
 }
+
+function permutation(str) {
+  var permutation = [];
+
+
+  return str;
+}
+
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var p = 3.141592689;
+
+  var result = []; // todo simple remove from and add
+  for (var i = 0; i < arr.length; i++) {
+    var first = arr[i];
+
+    var name = first.name;
+    var avg = first.avgAlt;
+    var a = earthRadius + avg;
+    var number = Math.sqrt(Math.pow(a, 3) / GM);
+
+    var T = 2 * p * number;
+    delete first['avgAlt'];
+    first['orbitalPeriod'] = Math.round(T);
+    result.push(first);
+  }
+
+
+  return result;
+}
