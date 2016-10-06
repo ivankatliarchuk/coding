@@ -189,3 +189,76 @@ function orbitalPeriod(arr) {
 
   return result;
 }
+
+function pairwise(arr, arg) {
+  arr.sort(function (a, b) {
+    return a - b;
+  }); // not really needed
+
+  var result = [];
+  var allResults = combinations(arr,  result);
+
+  for (var i = 0; i < allResults.length; i++) {
+    console.log(allResults[i]);
+  }
+  return arg;
+}
+
+function combinations(input) {
+  var result = [];
+  var f = function (temp, worker, size) {
+    for (var i = 0; i < worker.length; i++){
+
+    //  console.log('->' + input[i] + "]");
+      temp.push(worker[i]);
+
+
+      f(temp, worker.slice(i + 1), size);
+      result.push(temp);
+    }
+  };
+  f([], input, input.length);
+ // console.log("->" + result);
+  return result;
+
+
+
+
+ /* var innerResult = [];
+  for (var i = 0; i < result.length; i++) {
+    for (var z = 0; z < result[i].length; z++) {
+      var temp = [];
+      temp.push(result[i]);
+      temp.push(result[i][z]);
+      innerResult.push(temp);
+    }
+  }
+  // do it again
+  return combinations(input, size - 1, innerResult);*/
+}
+
+// add more functions
+/**
+ * drop element.
+ * @param arr
+ * @param func
+ * @return {*}
+ */
+function dropElements(arr, func) {
+
+  // Drop them elements.
+  return arr.filter(func);
+}
+
+
+function getCombinations(chars) {
+  var result = [];
+  var f = function(prefix, chars) {
+    for (var i = 0; i < chars.length; i++) {
+      result.push(prefix + chars[i]);
+      f(prefix + chars[i], chars.slice(i + 1));
+    }
+  }
+  f('', chars);
+  return result;
+}

@@ -49,3 +49,38 @@ QUnit
       assert.deepEqual(orbitalPeriod(item.input), item.output, 'failed');
     });
   });
+
+pairnumbers = [
+    {input: [1, 2, 3], summ: 3, result: 1}
+];
+
+QUnit
+  .test('pairs', function (assert) {
+    pairnumbers.forEach(function (item) {
+      assert.deepEqual(pairwise(item.input, item.summ), item.result, 'failed');
+    });
+  });
+
+dropelements = [
+  {input: [1, 2, 3], func: function (n) {
+    return n < 3;
+  }, result: [1,2]}
+];
+
+QUnit
+  .test('drop element', function (assert) {
+    dropelements.forEach(function (item) {
+      assert.deepEqual(dropElements(item.input, item.func), item.result, 'failed');
+    });
+  });
+
+combination = [
+  {input: ['a', 'b'], result: ['a', 'ab', 'b']}
+];
+
+QUnit
+  .test('drop element', function (assert) {
+    combination.forEach(function (item) {
+      assert.deepEqual(getCombinations(item.input), item.result, 'failed');
+    });
+  });
