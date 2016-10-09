@@ -145,3 +145,33 @@ QUnit
       assert.deepEqual(booWho(item.input), item.result, 'failed');
     });
   });
+
+
+spinals = [
+  {input: "This Is Spinal Tap", result: "this-is-spinal-tap"},
+  {input: "The_Andy_Griffith_Show", result: "the-andy-griffith-show"},
+  {input: "Teletubbies say Eh-oh", result: "teletubbies-say-eh-oh"},
+  {input: "thisIsSpinalTap", result: "this-is-spinal-tap"},
+  {input: "AllThe-small Things", result: "all-the-small-things"},
+];
+QUnit
+  .test('spinal cases', function (assert) {
+    spinals.forEach(function (item) {
+      assert.deepEqual(spinalCase(item.input), item.result, 'failed');
+    });
+  });
+
+arraysNested = [
+  {input: [[["a"]], [["b"]]], result: ['a', 'b']},
+  {input: [1, [2], [3, [[4]]]], result: [1, 2, 3 , 4]},
+  {input: [1, [], [3, [[4]]]], result: [1, 3 , 4]},
+  //input: [1, {}, [3, [[4]]]], result: [1, 3 , 4]},
+];
+QUnit
+  .test('flattern arrays', function (assert) {
+    arraysNested.forEach(function (item) {
+      assert.deepEqual(steamrollArray(item.input), item.result, 'failed');
+    });
+  });
+
+

@@ -386,4 +386,70 @@ function booWho(bool) {
   return bool;
 }
 
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  var result = [];
+  var prev = false;
+  for (var i = 0; i < str.length; i++) {
+    var charac = str[i];
+    if (i > 0) {
+      // test whether the letter is uppercase
+      if (charac === charac.toUpperCase() && charac !== ' '
+        && charac !== '_'
+        && charac !== '-'
+        && str[i-1] !== " "
+        && str[i-1] !== "-"
+        && str[i-1] !== "_"){
+       // console.log("pushed 0 [-" + charac + "]");
+        result.push("-" + charac);
+      } else  if (charac === charac.toUpperCase() && prev && charac !== ' ') {
+      //  console.log("pushed 1 [" + charac + "]");
+        result.push(charac);
+        prev = false;
+      } else if (charac === ' ' || charac === '_') {
+       // console.log("pushed 2 [-" + charac + "]");
+        result.push("-");
+      } else {
+       // console.log("pushed 3 [" + charac + "]");
+        result.push(charac);
+      }
+    } else {
+      result.push(charac);
+    }
+
+    if (charac === ' ' || charac === '_') {
+      prev = true;
+    }
+  }
+ // console.log(result);
+  // hardest case
+
+  return result.join("").toLowerCase();
+}
+/**
+ * flatten nested array.
+ * @param arr
+ * @return {*}
+ */
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+  var result = [];
+  result = flatten(arr, result);
+  console.log(result);
+  return result;
+}
+
+function flatten(arr, result) {
+  for (var i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flatten(arr[i], result);
+    } else {
+      console.log(Array.isArray(arr[i]) + arr[i]);
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
 
