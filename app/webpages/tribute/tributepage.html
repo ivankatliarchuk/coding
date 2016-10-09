@@ -2,25 +2,104 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-		<title>Tribute Page</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css"/>
+		<title>Tribute Page</title>
     <style>
       h1 {
         font-family : Lobster, Monospace, sans-serif;
       }
-      h2 {
-        font-size: 16px;
+      .outer {
+        background-color: #97d2af;
+        border-radius: 3%;
       }
+      .inner {
+        background-color: #b6d2d1;
+        border-color: #151840;
+        border-width: 10px;
+      }
+      /*blockquote*/
+      blockquote {
+        background: #97d2af;
+        border-left: none;
+        border-right: none;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+      }
+      blockquote:before {
+        color: #8695d2;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+      blockquote p {
+        display: inline;
+      }
+      .img {
+        width: 100%;
+        height:auto;
+        padding-bottom: 10px;
+      }
+      
     </style>
 	</head>
 	<body>
-		<h1>Tadeusz Kościuszko</h1>
-    <h3>There is a time when you have to sacrifice everything to have everything saved.</h3>
-    <img src="castushko.png" alt="Tadeus closint the debate in the House of Representative">
-    
-    <h5>'I will not fight for the sake of szlachta alone, I want freedom for the whole nation, and only for such freedom am I willing to risk my life,'
-      he declared in what is one of his most famous quotes nowadays.
-    --- Tadeusz Kościuszko </h5>
+    <div class="container-fluid"> <!--todo add backgound-->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 outer">
+          <h1 class="text-primary text-center">Andrzej Tadeusz Bonawentura Kościuszko</h1>
+          <blockquote>There is a time when you have to sacrifice everything to have everything saved.</blockquote>
+          <div class="inner">
+          <div class="row">
+            <div class="col-md-12">
+              <img class="img-responsive img"
+                src="http://media.wplm.pl/pictures/825/upscale_True/path/wp/photo/2012-03/900/600/kosciuszko-przysiega-rs.jpg" alt="Tadeus closint the debate in the House of Representative">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-muted text-center">Tadeus closing the debate in the House of Representative</p>
+            </div>
+          </div>
+          </div>
+      
+      <!--add something like on page about image.-->
+      <h3 class="text-center">Her's a time line of Tadeusz Kościuszko</h3>
+      <!--todo add animation, make them appear one by one-->
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1746</b> February 4 - Born in Merechevshnina, Belarus</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="true"></i><b>1766</b> - Graduate from the <a href="https://en.wikipedia.org/wiki/Corps_of_Cadets_(Warsaw)">Corps of Cadets</a>
+          in <a href="https://en.wikipedia.org/wiki/Warsaw">Warshaw</a></li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1769</b> - Moved to France to pursue further studies</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1774</b> - Returned to Poland and become a tutor in <a href="https://en.wikipedia.org/wiki/J%C3%B3zef_Sylwester_Sosnowski">Jozef Sylwester Sosnowski</a> household </li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1776</b> - Moved to France and emigrate to North America</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1776</b> - Take a part in American Revolutionary Was as colonel in the Continental Army</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1797</b> - Become a close friend of Thomas Jefferson</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1783</b> - In recognition of his services, the Continental Congress promoted him to brigadier geners</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1784</b> - Returning to Polan, and become a major general in the Polish-Lithuanian Army </li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1794</b> - Organized an uprising against Russua. Become a <i>Nachalnik</i> of the Belarussion-Polish-Lithuanina guerilla </li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1794</b> - Captured by russian occupational forces</li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1796</b> - Was pardoned by Tsar Paul I and emigrated to USA </li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1798</b> - Alongside with Thomas Jefferson wrote a will and dedicated his American assets to the education and freedom of U.S. slaves </li>
+        <li><i class="fa-li fa fa-angle-double-right" aria-hidden="false"></i><b>1817</b> - Otober 15 - Did in Solothum, Switzerland</li>
+      </ul>
+      <blockquote >I will not fight for the sake of szlachta alone, I want freedom for the whole nation, and only for such freedom
+        am I willing to risk my life.
+          <footer>--- Tadeusz Kościuszko</footer>
+      </blockquote>
+       </div>
+        <div class="col-md-2"></div>
+      </div>
+      
+      </div>
+      
 	</body>
 </html>

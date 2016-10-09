@@ -210,11 +210,10 @@ function combinations(input) {
     for (var i = 0; i < worker.length; i++){
 
     //  console.log('->' + input[i] + "]");
-      temp.push(worker[i]);
 
-
-      f(temp, worker.slice(i + 1), size);
-      result.push(temp);
+        temp.push(worker[i]);
+        result.push(temp);
+        f(temp, worker.slice(0), size);
     }
   };
   f([], input, input.length);
@@ -238,17 +237,7 @@ function combinations(input) {
 }
 
 // add more functions
-/**
- * drop element.
- * @param arr
- * @param func
- * @return {*}
- */
-function dropElements(arr, func) {
 
-  // Drop them elements.
-  return arr.filter(func);
-}
 
 
 function getCombinations(chars) {
@@ -258,7 +247,143 @@ function getCombinations(chars) {
       result.push(prefix + chars[i]);
       f(prefix + chars[i], chars.slice(i + 1));
     }
-  }
+  };
   f('', chars);
   return result;
 }
+function LOG(message) {
+ // console.log("-->" + message + "<--");
+}
+function symSimetic(args) {
+
+  var result = [];
+  var array = Array.prototype.slice.call(args, 0);
+
+  for (var f = 0; f < array.length; f++) {
+
+    // remove duplicate
+    var temp = [];
+  //  LOG(array[f]);
+    for (var i = 0; i < array[f].length; i++) {
+      var unigque = false;
+      for (var z = i + 1; z < array[f].length; z++) {
+        if (array[f][i] === array[f][z]) {
+          LOG(array[f][i] + '::<->::' +  array[f][z]);
+          array[f].splice(z, 1);
+          z--;
+          LOG('removed ' + array[f]);
+        } else if (z === array[f].length - 1) {
+          unigque = true;
+        }
+      }
+      if (i === array[f].length - 1 || unigque) {
+        temp.push(array[f][i]);
+      }
+    }
+    // LOG('->temp->' + temp);
+    if (f === 0) {
+      result = result.concat(temp).sort(sortF);
+    } else {
+      var newArr = [];
+      LOG('-> res ' + result);
+      LOG('-> tt ' + temp);
+      LOG("++++");
+      for (var i = 0; i < result.length; i++) {
+        var flag = false;
+        for (var z = 0; z < temp.length; z++) {
+          if (result[i] === temp[z] ) {
+            LOG('removed ' + temp[z] + ' from temp');
+            temp.splice(z, 1);
+           // z--;
+            flag = true;
+          } else if (z === temp.length - 1) {
+            LOG("added " + result[i]);
+            newArr.push(result[i]);
+          }
+        }
+        if (flag) {
+          LOG('removed ' + result[i] + ' from result');
+          result.splice(i, 1);
+          flag = false;
+          i--;
+        }
+      }
+      LOG(newArr + 'plus ' + result);
+      result = result.concat(temp).sort(sortF);
+    }
+  }
+
+  return result;
+}
+
+function sortF(a, b) {
+  return a -b;
+}
+
+function smallestCommons(arr) {
+
+  var a = arr[0];
+  var b = arr[1];
+
+  var res = lcm(a, b);
+
+  return res;
+}
+
+function lcm(a, b) {
+  var aa = [];
+  var bb = [];
+  if (prime(a)) {
+    aa.push(a);
+  }
+  if (prime(b)) {
+    bb.push(b);
+  }
+  if (aa.length !==0 && bb.length !== 0) {
+    return a * b;
+  }
+  if (a.length === 0) {
+    var prop = Math.sqrt(num);
+    for (var i = 2; i <= prop; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+  }
+  if (b.length === 0) {
+
+  }
+}
+/**
+ *
+ * @param str
+ * @param before
+ * @param after
+ * @return {*}
+ */
+function myReplace(str, before, after) {
+  // check whether or not first letter is capital.
+  var charac = before[0];
+  if (charac === charac.toUpperCase()) {
+    // upper case.
+    var aChar = after[0];
+    after = after.replace(aChar, aChar.toUpperCase());
+  } else {
+
+  }
+  return str.replace(before, after);
+}
+
+function booWho(bool) {
+  // What is the new fad diet for ghost developers? The Boolean.
+  if (typeof bool === "boolean") {
+  //  console.log("yes " + bool);
+    return true;
+  } else {
+  //  console.log("no [" + bool + "]");
+    return false;
+  }
+  return bool;
+}
+
+

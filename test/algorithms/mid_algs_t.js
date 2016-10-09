@@ -50,7 +50,7 @@ QUnit
     });
   });
 
-pairnumbers = [
+/*pairnumbers = [
     {input: [1, 2, 3], summ: 3, result: 1}
 ];
 
@@ -59,7 +59,7 @@ QUnit
     pairnumbers.forEach(function (item) {
       assert.deepEqual(pairwise(item.input, item.summ), item.result, 'failed');
     });
-  });
+  });*/
 
 dropelements = [
   {input: [1, 2, 3], func: function (n) {
@@ -67,14 +67,41 @@ dropelements = [
   }, result: [1,2]}
 ];
 
-QUnit
+/*QUnit
   .test('drop element', function (assert) {
     dropelements.forEach(function (item) {
       assert.deepEqual(dropElements(item.input, item.func), item.result, 'failed');
     });
+  });*/
+
+symsSymetric = [
+  {input: [[1, 2, 3], [5, 2, 1, 4]], result: [3, 4, 5]},
+  {input: [[1, 2, 3], [5, 2, 1, 4]], result: [3, 4, 5]},
+  {input: [[1, 2, 5], [2, 3, 5], [3, 4, 5]], result: [1, 4, 5]},
+  {input: [[1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]], result: [1, 4, 5]},
+  {input: [[3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]], result: [2, 3, 4, 6, 7]},
+];
+
+QUnit
+  .test('sym symmetric', function (assert) {
+    symsSymetric.forEach(function (item) {
+      assert.deepEqual(symSimetic(item.input), item.result, 'failed');
+    });
   });
 
-combination = [
+commons = [
+  {input : [3, 7], result: 21},
+];
+
+QUnit
+  .test('smallest common', function (assert) {
+    commons.forEach(function (item) {
+      assert.deepEqual(smallestCommons(item.input), item.result, 'failed');
+    });
+  });
+
+
+/*combination = [
   {input: ['a', 'b'], result: ['a', 'ab', 'b']}
 ];
 
@@ -82,5 +109,39 @@ QUnit
   .test('drop element', function (assert) {
     combination.forEach(function (item) {
       assert.deepEqual(getCombinations(item.input), item.result, 'failed');
+    });
+  });*/
+
+toReplace = [
+  {str : "A quick brown fox jumped over the lazy dog", before : "jumped", after : "leaped",
+    result : "A quick brown fox leaped over the lazy dog"},
+  {str : "He is Sleeping on the couch", before : "Sleeping", after : "sitting",
+    result : "He is Sitting on the couch"},
+  {str : "Let us go to the store", before : "store", after : "mall",
+    result : "Let us go to the mall"},
+  {str : "His name is Tom", before : "Tom", after : "john",
+    result : "His name is John"},
+];
+
+QUnit
+  .test('replace string', function (assert) {
+    toReplace.forEach(function (item) {
+      assert.deepEqual(myReplace(item.str, item.before, item.after), item.result, 'failed');
+    });
+  });
+
+booleans = [
+  {input: true, result : true},
+  {input: false, result : true},
+  {input: [1, 2, 3], result : false},
+  {input: [].slice, result : false},
+  {input: 1, result : false},
+  {input: NaN, result : false},
+  {input: 'a', result : false},
+];
+QUnit
+  .test('is boolean', function (assert) {
+    booleans.forEach(function (item) {
+      assert.deepEqual(booWho(item.input), item.result, 'failed');
     });
   });
