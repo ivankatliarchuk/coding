@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cell Align</title>
+    <style>
+      .row-1 {
+        background-color: pink;
+      }
+      .row-2 {
+        background-color: lightgreen; !important;
+      }
+      .row-3 {
+        background-color: lightblue;
+      }
+      .cell-1 {
+        vertical-align: top;
+      }
+      
+      .column-2 {
+        text-align: right;
+      }
+      
+      .column-3 {
+        text-align: center;
+      }
+      
+      table {
+        border-collapse: collapse;
+        border: 2px solid black;
+      }
+      
+      td {
+        padding: 5px;
+        padding-right: 10px;
+        border: 1px solid lightgray;
+        color: brown;
+        background-color: lightyellow;
+      }
+      
+      th {
+        padding: 10px;
+        border: 1px solid black;
+        color: darkblue;
+        background-color: lightcyan;
+      }
+      
+      caption {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+    </style>
+	</head>
+	<body>
+    <table>
+      <caption>Распределение браузеров</caption>
+      <tr>
+        <th class="cell-1" rowspan="2">Браузер</th>
+        <th colspan="2">Посещения</th>
+      </tr>
+      <tr>
+        <th>Количество</th>
+        <th>В процентах</th>
+      </tr>
+      <tr>
+        <td class="row-1">Mozilla Firefox</td>
+        <td class="column-2">1263</td>
+        <td class="column-3">75%</td>
+      </tr>
+      <tr class="row-2">
+        <td >Google Chrome</td>
+        <td class="column-2">78</td>
+        <td class="column-3">5%</td>
+      </tr>
+      <tr>
+        <td class="row-3">Safari</td>
+        <td class="column-2">345</td>
+        <td class="column-3">20%</td>
+      </tr>
+    </table>
+	</body>
+</html>
