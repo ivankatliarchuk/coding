@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cell Distance</title>
+    <style>
+      table {
+        border-collapse: separate;
+        border: 3px solid black;
+        border-spacing: 5px;
+      }
+      td {
+        border: 2px solid lightgreen;
+        /*otsypi*/
+        padding: 5px;
+        padding-right: 100px;
+      }
+    </style>
+	</head>
+	<body>
+		
+    <!--
+    Отступы внутри ячеек можно добавлять с помощью атрибута cellpadding тега <table>. Но лучше его не использовать,
+    а задавать отступы с помощью CSS.
+
+CSS-свойство padding задаёт «внутренние отступы элемента» со всех сторон. Можно задавать отступы для каждой из сторон
+отдельно, используя свойства:
+   padding-top,
+
+padding-right,
+
+padding-bottom,
+
+padding-left.
+
+Например, чтобы задать у ячеек все отступы в 10 пикселей, а отступ слева в 20 пикселей, нужно написать такой CSS-код:
+
+td {
+  padding: 10px;
+  padding-left: 20px;
+}
+-->
+    <!-- otsypi mezdy jacheikami
+    Отступы между ячейками не работают с border-collapse: collapse, что достаточно логично, ведь рамки ячеек в этом режиме
+    «склеены» и их не разорвать.
+    Поэтому в этом задании мы используем border-collapse: separate, которое «расклеивает» ячейки. На самом деле это значение по
+     умолчанию, а мы используем его только для наглядности.
+     Если удалить свойство border-collapse, то результат не изменится, ячейки будут отображаться раздельно.
+   
+   Отступы между ячейками можно задать:
+
+с помощью атрибута cellspacing тега <table>
+
+или c помощью CSS-свойства border-spacing.
+
+Отметим, что свойство border-spacing задаётся для таблицы, в отличие от padding, которое задаётся для ячеек.
+    
+    -->
+    <h1>Распределение браузеров</h1>
+    
+    <table ><!-- cellpadding="5" -->
+      <tr>
+        <td>Браузер</td>
+        <td>Посещения</td>
+        <td>Доля</td>
+      </tr>
+      <tr>
+        <td>Mozilla Firefox</td>
+        <td>163</td>
+        <td>59%</td>
+      </tr>
+      <tr>
+        <td>Google Chrome</td>
+        <td>78</td>
+        <td>28%</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>35</td>
+        <td>13%</td>
+      </tr>
+    </table>
+	</body>
+</html>
