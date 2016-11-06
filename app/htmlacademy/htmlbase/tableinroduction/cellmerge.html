@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cell Merging</title>
+    <style>
+      table {
+        border-collapse: separate;
+        border: 2px solid black;
+        border-spacing: 4px;
+      }
+      td {
+        padding: 5px;
+        padding-right: 30px;
+        border: 1px solid lightgreen;
+      }
+      th {
+        padding: 10px;
+        border: 1px solid crimson;
+      }
+      caption {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .pink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>Распределение браузеров</caption>
+      <tr>
+        <th rowspan="2">Браузер</th>
+        <th colspan="2">Посещения</th>
+        <!--<th class="pink"></th>-->
+      </tr>
+      <tr>
+        <!--<th></th>-->
+        <th>Количество</th>
+        <th>В процентах</th>
+      </tr>
+      <tr>
+        <td>Mozilla Firefox</td>
+        <td>163</td>
+        <td>59%</td>
+      </tr>
+      <tr>
+        <td>Google Chrome</td>
+        <td>78</td>
+        <td>28%</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>35</td>
+        <td>13%</td>
+      </tr>
+    </table>
+  </body>
+</html>
