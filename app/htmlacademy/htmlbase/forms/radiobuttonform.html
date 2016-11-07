@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>radio button form</title>
+    <style>
+      input[type="submit"] {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Группа переключателей</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>В тестах часто встречаются задания типа «выберите один из предложенных вариантов».</p>
+      
+      <p><i>Какой тег обозначает «абзац»?</i></p>
+      <label>
+        <input type="radio" name="question-one" value="p">
+        Тег &lt;p&gt;
+      </label>
+      <br>
+      <label>
+        <!-- добавьте второй переключатель сюда -->
+        <input type="radio"  name="question-one" value="b" checked>
+        Тег &lt;b&gt;
+      </label>
+      
+      <input type="submit" value="Отправить">
+    </form>
+    <br>
+    <h1>Переключатель или «радиобаттон»</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>В тестах часто встречаются задания типа «выберите один из предложенных вариантов».</p>
+      
+      <p><i>Какой тег обозначает «абзац»?</i></p>
+      <label>
+        <!-- добавьте поле сюда -->
+        <input type="radio" name="question-one" value="p">
+        Тег &lt;p&gt;
+      </label>
+      
+      <input type="submit" value="Отправить">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>hidden field form</title>
+	</head>
+	<body>
+		<h1>Скрытое поле</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label>
+        Сумма платежа:
+        <input type="text" name="amount" value="500"> руб.
+      </label>
+      
+      <!-- Добавьте поле сюда -->
+      <input type="hidden" value="15" name="account_number">
+      
+      <input type="submit" value="Оплатить">
+    </form>
+	</body>
+</html>

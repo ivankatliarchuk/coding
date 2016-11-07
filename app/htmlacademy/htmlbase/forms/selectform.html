@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>select form</title>
+    <style>
+      input[type="submit"] {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+	</head>
+	<body>
+    <h1>«Мультиселект»</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>В мультиселекте можно выбрать несколько вариантов, щёлкая по ним с зажатой клавишей Ctrl на Windows или Command на OS X.</p>
+      
+      <p><i>Любимые дни недели:</i></p>
+      <select name="days" multiple size="7">
+        <option>Понедельник</option>
+        <option>Вторник</option>
+        <option>Среда</option>
+        <option>Четверг</option>
+        <option>Пятница</option>
+        <option>Суббота</option>
+        <option selected>Воскресенье</option>
+      </select>
+      
+      <input type="submit" value="Отправить">
+    </form>
+    <br>
+		<h1>Раскрывающийся список или «селект»</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>Часто выпадающие списки используют для выбора даты.</p>
+      
+      <p><i>Ваш год рождения</i></p>
+      <!-- добавьте селект сюда -->
+      <select name="year">
+        <option value="2000">2000 год</option>
+        <option value="2001">2001 год</option>
+      </select>
+      
+      <input type="submit" value="Отправить">
+    </form>
+	</body>
+</html>
