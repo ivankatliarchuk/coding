@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Испытание: форма регистрации</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        width: 350px;
+        padding: 10px 20px;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      
+      h1 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Регистрация</h1>
+    
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="email">Ваш логин (email):</label><br>
+      <input type="text" name="email" id="email"><br>
+      <label for="password">Пароль:</label><br>
+      <input type="password" name="password" id="password"><br>
+      <label for="info">Информация о себе:</label><br>
+      <textarea id="info" name="info" rows="3"></textarea><br>
+      <input type="checkbox" id="check-box" checked>
+      <label for="check-box">Подписаться на рассылку</label><br>
+      <input type="submit" value="Зарегистрироваться"/>
+    </form>
+  </body>
+</html>
