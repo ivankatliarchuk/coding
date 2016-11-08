@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Контекстные селекторы</title>
+    <link rel="stylesheet" href="css2.css">
+    <style>
+      .shooter-1 .first,
+      .shooter-1 .third,
+      .shooter-1 .fourth,
+      .shooter-2 .second,
+      .shooter-2 .third,
+      .shooter-2 .fourth,
+      .shooter-2 .fifth {
+        background-color: white;
+      }
+      
+      .shooter-1 .second,
+      .shooter-1 .fifth,
+      .shooter-2 .first {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shooter-1">
+      <ul class="target">
+        <li class="first">1</li>
+        <li class="second">2</li>
+        <li class="third">3</li>
+        <li class="fourth">4</li>
+        <li class="fifth">5</li>
+      </ul>
+    </div>
+    <div class="shooter-2">
+      <ul class="target">
+        <li class="first">1</li>
+        <li class="second">2</li>
+        <li class="third">3</li>
+        <li class="fourth">4</li>
+        <li class="fifth">5</li>
+      </ul>
+    </div>
+  </body>
+</html>

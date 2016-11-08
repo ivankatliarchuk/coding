@@ -2,12 +2,9 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: url('https://htmlacademy.ru/assets/course7/shooter1.jpg') no-repeat 0 0;
+  background: url('https://htmlacademy.ru/assets/course7/shooters2.jpg') no-repeat 0 0;
   background-size: cover;
 }
-/*
-https://htmlacademy.ru/assets/course7/course-2.css
-*/
 
 .target {
   position: absolute;
@@ -37,4 +34,8 @@ li {
 
 li:last-child {
   margin: 0;
+}
+
+.shooter-2 .target {
+  top: 110px;
 }
