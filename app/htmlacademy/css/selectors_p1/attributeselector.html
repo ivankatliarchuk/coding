@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Селекторы атрибутов</title>
+    <link rel="stylesheet" href="css5.css">
+    <style>
+      input[required] {
+        background-color: #fcf8e3;
+      }
+      input[type="password"] {
+        background-color: #f2dede;
+      }
+      input[type="submit"] {
+        border-color: green;
+      }
+    </style>
+	</head>
+	<body>
+    <form class="login" action="https://echo.htmlacademy.ru" method="post">
+      <label for="login">Логин</label>
+      <input type="text" id="login" name="login" required>
+      
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password">
+      
+      <input type="submit" value="Войти">
+    </form>
+	</body>
+</html>
