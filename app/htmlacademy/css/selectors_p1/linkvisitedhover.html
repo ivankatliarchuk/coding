@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Псевдоклассы :link, :visited и :active</title>
+    <style>
+      a:link {
+        background-color: black;
+      }
+      a:visited {
+        background-color: #ccc;
+      }
+      a:active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Псевдоклассы для ссылок</h1>
+    <p><a href="/courses/42/run/14">Эта ссылка посещена</a>, так как ведёт на страницу с этим заданием.</p>
+    <p><a href="/never-visited">Эта ссылка ещё не посещена</a>, так как ведёт на несуществующую страницу.</p>
+    <p>Кстати, для ссылок очень часто задают стили при наведении с помощью :hover.</p>
+  </body>
+</html>
