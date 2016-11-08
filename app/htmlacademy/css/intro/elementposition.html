@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>element positioning</title>
+    <style>
+      .p-absolute {
+        padding: 20px;
+        background-color: rgba(0, 255, 0, 0.25);
+        position: absolute;
+        left: 100px;
+        bottom: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Позиционирование элементов</h1>
+    <h1>Как выпасть из потока?</h1>
+    
+    <p>Существует понятие «document flow» или «поток документа». Оно определяет то, как располагаются элементы на
+      HTML-странице.</p>
+    
+    <p class="p-absolute">Абсолютно позиционированные элементы исключаются из потока.</p>
+    
+    <p>Другие элементы как бы перестают их замечать и то место, где располагается абсолютно позиционированный элемент,
+      считают пустым.</p>
+  
+  </body>
+</html>
