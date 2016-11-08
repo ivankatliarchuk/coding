@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>:nth-child и контекстные селекторы</title>
+    <link rel="stylesheet" href="css2.css">
+    <style>
+      li {
+        background-color: white;
+      }
+      .shooter-1 li:nth-child(2),
+      .shooter-1 li:last-child,
+      .shooter-2 li:first-child {
+        background-color: red;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="shooter-1">
+      <ul class="target">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="shooter-2">
+      <ul class="target">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+	</body>
+</html>
