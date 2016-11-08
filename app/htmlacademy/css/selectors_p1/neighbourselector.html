@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Соседние селекторы</title>
+    <link rel="stylesheet" href="css1.css">
+    <style>
+      li {
+        background-color: white;
+      }
+      .first + li, .fourth + li {
+        background-color: red;
+      }
+    </style>
+	</head>
+	<body>
+    <ul class="target">
+      <li class="first">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li class="fourth">4</li>
+      <li>5</li>
+    </ul>
+	</body>
+</html>

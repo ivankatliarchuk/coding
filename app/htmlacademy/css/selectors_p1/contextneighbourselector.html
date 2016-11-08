@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Контекстные и соседние селекторы</title>
+    <link rel="stylesheet" href="css2.css">
+    <style>
+      li {
+        background-color: white;
+      }
+      .shooter-1 .third + li,
+      .shooter-2 .first + li{
+        background-color: red;
+      }
+      .shooter-2 .third + li {
+        background-color: yellow;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="shooter-1">
+      <ul class="target">
+        <li>1</li>
+        <li>2</li>
+        <li class="third">3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="shooter-2">
+      <ul class="target">
+        <li class="first">1</li>
+        <li>2</li>
+        <li class="third">3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+	</body>
+</html>
