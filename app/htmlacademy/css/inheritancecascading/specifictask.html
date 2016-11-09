@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Еще одна задачка на специфичность</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css2.css">
+    <style>
+      span {
+        background-color: #27ae60; /* Зеленый */
+      }
+  
+      div span {
+        background-color: #2980b9; /* Синий */
+      }
+  
+      #floor .cat-in-box {
+        background-color: #34495e; /* Мокрый асфальт */
+      }
+  
+      .cat-in-box {
+        background-color: #8e44ad; /* Фиолетовый */
+      }
+  
+      #floor span {
+        background-color: #c0392b; /* Красный */
+      }
+  
+      div .cat-in-box {
+        background-color: #e67e22; /* Оранжевый */
+      }
+    </style>
+	</head>
+	<body>
+    <div id="floor">
+      <span class="cat-in-box">Кексик</span>
+    </div>
+	</body>
+</html>
