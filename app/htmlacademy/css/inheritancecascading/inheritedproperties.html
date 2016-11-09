@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Наследуемые свойст</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        font-family: "PT Sans", sans-serif;
+        font-size: 12px;
+        text-align: center;
+      }
+      
+      .block1 {
+        font-style: italic;
+      }
+      .block2 {
+        cursor: pointer;
+      }
+      .block2 > ul {
+        list-style-type: square;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block1">
+      <p>Строка текста в первом блоке</p>
+      <p>Еще одна строка текста в первом блоке</p>
+      <ul>
+        <li>Первый элемент списка</li>
+        <li>Второй элемент списка</li>
+        <li>Третий элемент списка</li>
+      </ul>
+    </div>
+    <div class="block2">
+      <p>Строка текста во втором блоке</p>
+      <p>Еще одна строка текста во втором блоке</p>
+      <ul>
+        <li>Первый элемент списка</li>
+        <li>Второй элемент списка</li>
+        <li>Третий элемент списка</li>
+      </ul>
+    </div>
+  </body>
+</html>

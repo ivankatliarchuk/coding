@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Наследование «на пальцах»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">
+    <style>
+      * {
+        color: #7f8c8d;
+        font-size: 12px;
+      }
+      
+      body {
+        font-family: "PT Sans", sans-serif;
+      }
+      
+      .selected {
+        color: #e74c3c;
+      }
+      
+      p.selected > span {
+        color: #3498db;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <p>Первая строка с произвольным текстом.</p>
+    <p class="selected">Вторая строка с <span>произвольным</span> текстом.</p>
+    <ul>
+      <li>Первый элемент списка</li>
+      <li class="selected">Второй <span>элемент</span> списка</li>
+      <li>Третий элемент списка</li>
+    </ul>
+  </body>
+</html>
