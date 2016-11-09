@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Принудительное наследование</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        font-family: "PT Sans", sans-serif;
+      }
+      
+      ul {
+        margin: 5px;
+        padding: 5px;
+        list-style: none;
+        border: 1px solid #666666;
+      }
+      
+      .second-list > li {
+        border: inherit;
+        margin: inherit;
+        padding: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Первый список</p>
+    <ul class="first-list">
+      <li>Первый элемент списка</li>
+      <li>Второй элемент списка</li>
+      <li>Третий элемент списка</li>
+    </ul>
+    <p>Второй список</p>
+    <ul class="second-list">
+      <li>Первый элемент списка</li>
+      <li>Второй элемент списка</li>
+      <li>Третий элемент списка</li>
+    </ul>
+  </body>
+</html>
