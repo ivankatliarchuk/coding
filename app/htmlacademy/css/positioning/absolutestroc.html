@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Абсолютное позиционирование и строчные элементы</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+  
+      .block {
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        background: #3a78a1;
+      }
+  
+      .inline-absolute {
+        color: white;
+        background: rgba(255, 0, 0, 0.5);
+        position: absolute;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block">Блок 1</div>
+    <span class="inline-absolute">Строчный элемент</span>
+    <div class="block">Блок 3</div>
+	</body>
+</html>

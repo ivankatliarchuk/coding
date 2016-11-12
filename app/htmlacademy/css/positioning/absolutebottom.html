@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>position:absolute и свойство bottom</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+  
+      .block {
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        background: #3a78a1;
+      }
+  
+      .block-absolute {
+        position: absolute;
+        right: 10px;
+        width: 100px;
+        margin-bottom: 20px;
+        padding: 10px;
+        color: white;
+        background: rgba(255, 0, 0, 0.5);
+        bottom: 10px;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block">Блок 1</div>
+    <div class="block-absolute">Блок 2</div>
+    <div class="block">Блок 3</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Точка отсчета координат</title>
+    <style>
+      body {
+        margin: 10px;
+        padding: 20px;
+        color: white;
+        border: 1px dotted #999999;
+        position: relative;
+      }
+  
+      .block-1 {
+        min-height: 100px;
+        padding: 10px;
+        background: #3a78a1;
+        position: relative;
+      }
+  
+      .block-2 {
+        min-height: 100px;
+        padding: 10px;
+        background: #27ae60;
+        position: relative;
+      }
+  
+      .block-absolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        font-size: 12px;
+        font-family: "Courier New", monospace;
+        background: #e74c3c;
+        opacity: 0.8;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block-1">
+      Блок 1
+      <div class="block-2">
+        Блок 2
+        <div class="block-absolute">
+          position: absolute;<br>
+          right: 10px;<br>
+          top: 10px;
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
