@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Тренируемся задавать координаты</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+  
+      .block {
+        position: relative;
+        display: inline-block;
+        width: 75px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        background: #3a78a1;
+      }
+  
+      .block-1 {
+        width: 150px;
+        height: 200px;
+      }
+  
+      .block-absolute {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #e74c3c;
+        top: 0;
+        left: 0;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block block-1">
+      <div class="block-absolute"></div>
+    </div>
+    <div class="block block-2">
+      <div class="block-absolute"></div>
+    </div>
+	</body>
+</html>

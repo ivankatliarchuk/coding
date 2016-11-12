@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Неявная точка отсчета</title>
+    <style>
+      body {
+        padding: 10px;
+      }
+      
+      .block {
+        margin: 10px;
+        padding: 20px;
+        color: white;
+        background: #3a78a1;
+      }
+      
+      .inline-absolute {
+        background: #e74c3c;
+        opacity: 0.8;
+        position: absolute;
+        margin: -15px 0 0 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">Что будет, если какому-нибудь элементу задать абсолютное позиционирование,
+      <span class="inline-absolute">но при этом</span> не задавать никаких свойств, влияющих на его
+      расположение (например, left)?
+    </div>
+    
+    <div class="block">Такой элемент выпадет из <span class="inline-absolute">потока</span>, но останется на
+      том месте, где был расположен до <span class="inline-absolute">этого.</span></div>
+  </body>
+</html>

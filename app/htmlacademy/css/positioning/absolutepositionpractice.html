@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Абсолютное позиционирование на практике</title>
+    <base href="https://htmlacademy.ru">
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      
+      .achievement {
+        position: relative;
+        width: 200px;
+        min-height: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        padding-left: 80px;
+      }
+      
+      .badge {
+        width: 44px;
+        height: 44px;
+        border: 3px solid #e5e5e5;
+        border-radius: 4px;
+        background-color: #7fc3e5;
+        background-image: url('/themes/htmlacademy/img/icons/medal.png');
+        position: absolute;
+        left: 20px;
+      }
+      
+      .title {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+      
+      .description {
+        font-size: 12px;
+        color: #666666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="achievement">
+      <div class="badge"></div>
+      <div class="title">Первое задание</div>
+      <div class="description">Выполнить первое задание в курсе</div>
+    </div>
+    <div class="achievement">
+      <div class="badge"></div>
+      <div class="title">Первое испытание</div>
+      <div class="description">Пройти первое испытание</div>
+    </div>
+  </body>
+</html>
