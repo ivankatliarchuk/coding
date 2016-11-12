@@ -3,3 +3,6 @@ https://htmlacademy.ru/demos/1#step1
 
 ntn-child
 https://htmlacademy.ru/demos/2#step1
+
+https://htmlacademy.ru
+<base href="https://htmlacademy.ru">
