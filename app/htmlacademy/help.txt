@@ -6,3 +6,12 @@ https://htmlacademy.ru/demos/2#step1
 
 https://htmlacademy.ru
 <base href="https://htmlacademy.ru">
+
+
+https://webdesign.tutsplus.com/ru/articles/quick-tip-set-relative-urls-with-the-base-tag--cms-21399
+
+<base target="_blank">
+
+
+create sprites
+http://spritepad.wearekiss.com/
