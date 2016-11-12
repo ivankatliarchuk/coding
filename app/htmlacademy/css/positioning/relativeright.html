@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>position: relative и свойство right</title><title>Title</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+  
+      .block {
+        margin-bottom: 20px;
+        padding: 10px;
+        color: white;
+        background: #3a78a1;
+      }
+  
+      .block-relative {
+        position: relative;
+        bottom: 10px;
+        margin-bottom: 40px;
+        padding: 10px;
+        color: white;
+        background: #3a78a1;
+        right: 10px;
+        /*margin: 40px;*/
+      }
+  
+      .block-shadow {
+        background: #cccccc;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block">Блок 1</div>
+    <div class="block-shadow">
+      <div class="block-relative">Блок 2</div>
+    </div>
+    <div class="block">Блок 3</div>
+	</body>
+</html>

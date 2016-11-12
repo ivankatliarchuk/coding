@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Относительное позиционирование</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+  
+      .block {
+        margin-bottom: 20px;
+        padding: 10px;
+        color: white;
+        background: #3a78a1;
+      }
+  
+      .block-relative {
+        margin-bottom: 20px;
+        padding: 10px;
+        color: white;
+        background: #3a78a1;
+        position: static;
+      }
+  
+      .block-shadow {
+        background: #cccccc;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="block">Блок 1</div>
+    <div class="block-shadow">
+      <div class="block-relative">Блок 2</div>
+    </div>
+    <div class="block">Блок 3</div>
+	</body>
+</html>
