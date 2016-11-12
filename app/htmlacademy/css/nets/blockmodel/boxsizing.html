@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Изменяем блочную модель, свойство box-sizing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 20px;
+      }
+
+      .block {
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 5px 10px;
+        color: #666666;
+        border: 2px solid #cccccc;
+        border-radius: 5px;
+      }
+    </style>
+	</head>
+	<body>
+    <form action="/echo" method="post">
+      <div class="block" style="width: 200px;">
+        <input type="text" value="Фамилия">
+      </div>
+      <div class="block" style="width: 250px;">
+        <input type="text" value="Имя">
+      </div>
+      <div class="block" style="width: 300px;">
+        <input type="text" value="Отчество">
+      </div>
+    </form>
+	</body>
+</html>

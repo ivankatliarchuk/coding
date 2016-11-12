@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ширина 100% и ширина по умолчанию</title>
+    <link rel="stylesheet"
+      href="style.css">
+    <style>
+      .container {
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+      }
+      
+      .block {
+        padding: 10px 0;
+      }
+      
+      .block-1 {
+        margin-bottom: 5px;
+        padding: 20px;
+      }
+      
+      .block-2 {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Ширина содержания: 200px<br>
+      Ширина общая: 244px
+      <div class="block block-1"
+        style="width: auto;">
+        содержания: 156px<br>
+        общая: 200px
+      </div>
+      <div class="block block-2"
+        style="width: 100%;">
+        содержания: 199.8px<br>
+        общая: 243px
+      </div>
+    </div>
+  </body>
+</html>
