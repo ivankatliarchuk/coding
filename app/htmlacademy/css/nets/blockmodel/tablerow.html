@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>display: table-row</title>
+    <style>
+      div {
+        margin: 5px;
+        padding: 5px;
+        border: 1px dotted white;
+      }
+  
+      .table {
+        display: table;
+        background: #d9edf7;
+        border-color: #3a87ad;
+        padding: 0;
+        border-spacing: 5px;
+      }
+  
+      .row {
+        background: #f2dede;
+        border-color: #b94a48;
+        display: table-row;
+      }
+  
+      .cell {
+        background: #fbeed5;
+        border-color: #c09853;
+        display: table-cell;
+      }
+    </style>
+	</head>
+	<body>
+    <h1>Посещения по городам</h1>
+    <div class="table">
+      <div class="row">
+        <div class="cell">Город</div>
+        <div class="cell">Посещения</div>
+        <div class="cell">Страниц</div>
+        <div class="cell">Время</div>
+      </div>
+      <div class="row">
+        <div class="cell">СПБ</div>
+        <div class="cell">500</div>
+        <div class="cell">6</div>
+        <div class="cell">00:08:05</div>
+      </div>
+      <div class="row">
+        <div class="cell">СПБ</div>
+        <div class="cell">500</div>
+        <div class="cell">6</div>
+        <div class="cell">00:08:05</div>
+      </div>
+    </div>
+	</body>
+</html>
