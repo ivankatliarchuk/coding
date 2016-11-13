@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Последнее испытание</title>
+    <style>
+      /* Базовые стили, изменять не нужно */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        width: 520px;
+        min-height: 270px;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+        color: white;
+        background-color: #3a78a1;
+        background-image: url("/assets/course9/grid.png");
+        background-repeat: repeat;
+        background-position: -80px -80px;
+      }
+      
+      /* Cтили, которые можно изменять */
+      .column {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: rgba(0, 255, 255, 0.2);
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        width: 76px;
+        margin-right: 10px;
+        
+      }
+      
+      .column {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: rgba(0, 255, 255, 0.2);
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        width: 76px;
+        margin-right: 10px;
+      }
+      
+      .cell {
+        padding: 5px 10px;
+        background: rgba(0, 255, 255, 0.2);
+        border: 1px solid white;
+        display: table-cell;
+        width: 96px;
+      }
+      
+      .row div.cell.col-1 {
+        border-right: 2px solid white;
+      }
+      
+      .col-3 {
+        display: none;
+      }
+      
+      .row div.cell {
+      }
+      
+      .table {
+        display: table;
+        border-collapse: collapse;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="column">
+      <strong>Базовые</strong><br>
+      block<br>
+      inline<br>
+      list-item<br>
+      none
+    </div>
+    <div class="column">
+      <strong>Сложные</strong><br>
+      inline-block<br>
+      inline-table
+    </div>
+    <div class="table">
+      <div class="row">
+        <div class="cell col-1">
+          <strong>Табличные</strong>
+        </div>
+        <div class="cell col-2"></div>
+        <div class="cell col-3"></div>
+      </div>
+      <div class="row">
+        <div class="cell col-1">
+          table
+        </div>
+        <div class="cell col-2">
+          -row<br>
+          -cell<br>
+          -column<br>
+          -caption<br>
+        </div>
+        <div class="cell col-3">
+          строка<br>
+          ячейка<br>
+          колонка<br>
+          заголовок<br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
