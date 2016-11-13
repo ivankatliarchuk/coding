@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Псевдокласс :only-of-type</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      .cards:only-of-type{
+        padding: 10px;
+        border: 2px dashed #55bb99;
+      }
+      .paper p:only-of-type {
+        color: #339966;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="group">
+      <ul class="cards">
+        <li class="king club"></li>
+        <li class="ace spade"></li>
+        <li class="jack heart"></li>
+      </ul>
+    </div>
+    <div class="group">
+      <ul class="cards">
+        <li class="ace spade"></li>
+        <li class="jack heart"></li>
+        <li class="ace spade"></li>
+        <li class="ace heart"></li>
+        <li class="queen diamond"></li>
+      </ul>
+      <div class="paper">
+        <h1>Как раскладывать пасьянс?</h1>
+        <p>Как хотите, так и раскладывайте.</p>
+      </div>
+      <div class="paper">
+        <h1>Как выигрывать в покер?</h1>
+        <p>Блефуйте!</p>
+        <p>Блефуйте!</p>
+        <p>Блефуйте!</p>
+      </div>
+    </div>
+	</body>
+</html>

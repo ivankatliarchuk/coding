@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Псевдокласс :empty</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      ul:empty {
+        height: 70px;
+        border: 2px dashed #55bb99;
+      }
+      .cards > li:not(:empty) {
+        height: 90px;
+        width: 60px;
+      }
+      .cards > li:not(:empty) span {
+        display: block;
+      }
+    </style>
+	</head>
+	<body>
+    <ul class="cards"></ul>
+    <ul class="cards">
+      <li class="queen heart"></li>
+    </ul>
+    <ul class="cards">
+      <li class="king club"></li>
+      <li class="ace spade"><span>A</span></li>
+      <li class="jack heart"></li>
+    </ul>
+    <ul class="cards">
+      <li class="ace spade"></li>
+      <li class="jack heart"></li>
+      <li class="ace spade"></li>
+      <li class="ace heart"></li>
+      <li class="queen diamond"><span>Q</span></li>
+    </ul>
+	</body>
+</html>
