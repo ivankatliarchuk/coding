@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Погружение в флоаты</title>
+    <meta charset="utf-8">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic"
+      rel="stylesheet"
+      type="text/css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      body {
+        font-family: "PT Sans", sans-serif;
+      }
+      
+      .container {
+        width: 400px;
+        margin: 20px auto;
+        padding: 10px;
+        box-shadow: 0 0 2px #cccccc;
+      }
+      
+      .block {
+        width: 80px;
+        padding: 10px;
+        color: white;
+        background: #3498db;
+        border: 2px solid #34495e;
+      }
+      
+      p {
+        background: #ecf0f1;
+        border: 2px dotted #bdc3c7;
+      }
+      
+      .block1, img {
+        float: left;
+        margin-right: 10px;
+      }
+      .block2 {
+        float: right;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block block1">.block1</div>
+      <p>Как и позиционирование, float используется для того, чтобы двигать боксы.</p>
+      <div class="block block2">.block2</div>
+      <p>Но в отличие от позиционирования, которым можно двигать боксы практически произвольно, все, что может
+        float — это сдвинуть элемент к одной из сторон потока, правой или левой.</p>
+      <p><img src="/assets/course65/float-behavior.png"
+        width="100"
+        alt=""> При этом сам бокс и следующие за ним в потоке приобретают интересное поведение: float'нутый бокс
+        смещается по горизонтали и прилипает к одной из сторон родителя.
+      </p>
+    </div>
+  </body>
+</html>
