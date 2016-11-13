@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Простейшая сетка, финал</title>
+    <meta charset="utf-8">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic"
+      rel="stylesheet"
+      type="text/css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "PT Sans", sans-serif;
+      }
+  
+      .wrapper {
+        width: 550px;
+        margin: 0 auto;
+        box-shadow: 0 0 2px #cccccc;
+        
+      }
+  
+      .header,
+      .footer {
+        padding: 10px;
+        background: #ecf0f1;
+      }
+  
+      .sidebar {
+        float: left;
+        width: 150px;
+        min-height: 150px;
+        padding: 10px;
+        color: white;
+        background: rgba(46, 204, 113, 0.8);
+      }
+  
+      .content {
+        min-height: 100px;
+        padding: 10px;
+        color: white;
+        background: #3498db;
+        margin-left: 170px;
+      }
+  
+      .clearfix::after {
+        display: table;
+        content: "";
+        clear: both;;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">Хедер</div>
+      <div class="content-container clearfix">
+        <div class="sidebar">
+          <p>Для нужного нам эффекта мы дадим основному блоку левый margin, чтобы он ужался направо, а
+            боковую панель заfloat'им.</p>
+        </div>
+        <div class="content">
+          <p>У этого способа есть один очень серьезный недостаток. Обратите внимание, что в исходном HTML блок
+            "sidebar" идет до блока "content" с основным содержимым. Не нужно думать, что так сделано случайно.
+            Так сделано специально, потому что иначе этот самый способ с наложением колонки поверх margin'а
+            не работал бы.</p>
+        </div>
+      </div>
+      <div class="footer">Футер</div>
+    </div>
+  </body>
+</html>
