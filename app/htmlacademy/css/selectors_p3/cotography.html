@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Котография</title>
+    <base href="https://htmlacademy.ru/assets/course58/">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet"  href="cat-boxes.css">
+    <style>
+      img[src$=".gif"] {
+        display: none;
+      }
+      img[src$=".jpg"] {
+        border: 5px solid #f6b267;
+        box-shadow: 0 0 0 3px #b77d3e;
+      }
+      
+      img[alt^="Брат"][src$=".jpg"],
+      img[alt^="Отец"][src$=".jpg"],
+      img[alt^="Мама"][src$=".jpg"]
+      {
+        border-color: #2980b9;
+        box-shadow: 0 0 0 3px #34495e;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Котография</header>
+    <main>
+      <div class="photos">
+        <img src="cat_fat.gif" alt="Отец Кекса">
+        <img src="cat_acrobat.jpg" alt="Черныш">
+        <img src="cat_clean.gif" alt="Друг Рудольф">
+        <img src="cat_grumpy.png" alt="Грустный кот">
+        <img src="cat_lady.jpg" alt="Мама Кекса">
+        <img src="cat_moustache.jpg" alt="Не Друг Адольф">
+        <img src="cat_pirate.png" alt="Брат Кекса Феликс">
+        <img src="cat_rascal.gif" alt="Друг Снежок">
+        <img src="cat_sing.jpg" alt="Брат Кекса Массимо">
+        <img src="cat_upsidedown.png" alt="Друг Семен">
+        <img src="cat_tied.png" alt="Сосед">
+        <img src="cat_walk.gif" alt="Кекс">
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>
