@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Испытание: UI-кит для формы</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        width: 550px;
+      }
+  
+      form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px #cccccc;
+      }
+  
+      fieldset {
+        padding: 10px;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+      }
+  
+      fieldset legend {
+        color: #34495e;
+      }
+  
+      .half-width {
+        display: inline-block;
+        width: 50%;
+        margin-right: -4px;
+      }
+  
+      
+      input + label{
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 10px;
+      }
+  
+      selector {
+        display: none;
+      }
+  
+     selector {
+        vertical-align: middle;
+        color: #7f8c8d;
+      }
+  
+      selector  {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-right: 8px;
+        vertical-align: middle;
+        border: 3px solid #ffffff;
+        box-shadow: 0 0 0 3px #bdc3c7;
+      }
+  
+      selector {
+        border-radius: 50%;
+      }
+  
+      input:checked {
+        background: #1abc9c;
+        box-shadow: 0 0 0 3px #1abc9c;
+      }
+  
+      selector {
+        color: #1abc9c;
+      }
+  
+      selector {
+        box-shadow: 0 0 0 3px #ecf0f1;
+      }
+  
+      input[type="radio"]:disabled,
+      input[type="radio"]:disabled + label,
+      input[type="checkbox"]:disabled,
+      input[type="checkbox"]:disabled + label
+      {
+        color: #ecf0f1;
+      }
+  
+      input[type="checkbox"],
+      input[type="radio"],
+      input[type="text"] {
+        width: 95%;
+        height: 24px;
+        margin-bottom: 10px;
+        padding: 2px 5px;
+        color: #000;
+        border: 2px solid #bdc3c7;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
+  
+      input[type="text"]:required {
+        border-color: #e74c3c;
+      }
+  
+      input[type="text"]:disabled {
+        color: #bdc3c7;
+        background: #f5f5f5;
+        border-color: #ecf0f1;
+      }
+  
+      input[type="text"]:invalid {
+        color: #c0392b;
+        background: #f2a097;
+        border-color: #e74c3c;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Форма личных данных</header>
+    <main>
+      <form action="/echo" method="post">
+        <fieldset>
+          <legend>Примеры полей</legend>
+          <div class="half-width">
+            <label>Радио-переключатели</label>
+            <input id="radio-1" name="radio" type="radio" checked>
+            <label for="radio-1">Активный</label>
+            <input id="radio-2" name="radio" type="radio">
+            <label for="radio-2">Неактивный</label>
+            <input id="radio-3" name="radio" type="radio" disabled>
+            <label for="radio-3">Заблокированный</label>
+          </div>
+          <div class="half-width">
+            <label>Чекбоксы</label>
+            <input id="checkbox-1" type="checkbox" checked>
+            <label for="checkbox-1">Активный</label>
+            <input id="checkbox-2" type="checkbox">
+            <label for="checkbox-2">Неактивный</label>
+            <input id="checkbox-3" type="checkbox" disabled>
+            <label for="checkbox-3">Заблокированный</label>
+          </div>
+          <label>Текстовые поля</label>
+          <input type="text" value="Обычное">
+          <input type="text" value="Обязательное" required>
+          <input type="text" value="Заблокированное" disabled>
+          <input type="text" value="Неверные данные" pattern="[0-9]{8}">
+        </fieldset>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>

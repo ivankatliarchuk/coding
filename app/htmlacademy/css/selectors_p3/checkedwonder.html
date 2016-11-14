@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cat-boxes.css">
+    <base href="https://htmlacademy.ru/assets/course58/">
+    <style>
+      #father:checked ~ .cat-in-box[title^="Отец"]:before {
+        display: none;
+      }
+      
+      #rudolf:checked ~ .cat-in-box[title$="Рудольф"]:before {
+        display: none;
+      }
+      
+      #snow:checked ~ .cat-in-box[title$="Снежок"]:before {
+        display: none;
+      }
+      
+      .boxes {
+        margin-top: 100px;
+      }
+      
+      .boxes label {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">Чудеса с ~ и :checked</header>
+    <main>
+      <div class="boxes">
+        <input id="father" type="checkbox">
+        <label for="father">Первый кот</label>
+        
+        <input id="rudolf" type="checkbox">
+        <label for="rudolf">Второй кот</label>
+        
+        <input id="snow" type="checkbox">
+        <label for="snow">Третий кот</label>
+        
+        <br>
+        
+        <div class="cat-in-box" title="Отец Кекса">
+          <img src="cat_fat.png">
+          <p>Отец Кекса</p>
+        </div>
+        <div class="cat-in-box" title="Друг Рудольф">
+          <img src="cat_clean.png">
+          <p>Друг Рудольф</p>
+        </div>
+        <div class="cat-in-box" title="Друг Снежок">
+          <img src="cat_rascal.png">
+          <p>Друг Снежок</p>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
+  </body>
+</html>
