@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Использование нестандартных шрифтов</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>aside tag</title>
     <base href="https://htmlacademy.ru">
-    <!--<link href="//fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">-->
     <style>
-     @font-face {
+      @font-face {
+        font-weight: 400;
         font-family: "Roboto";
         font-style: normal;
-        font-weight: 400;
-        src:
-          local("Roboto Regular"),
-          local("Roboto-Regular"),
-          url("https://htmlacademy.ru/assets/course73/roboto.woff") format("woff");
+        src: local("Roboto Regular"),
+        local("Roboto-Regular"),
+        url("https://htmlacademy.ru/assets/course73/roboto.woff") format("woff");
       }
+      
       html,
       body {
         margin: 0;
         padding: 0;
         font-size: 100%;
+        font-family: "Roboto", sans-serif;
         color: white;
         background-color: #2c3e50;
-        font-family: "Roboto", "Arial", sans-serif;
       }
       
       /* Header */
@@ -32,7 +31,8 @@
         min-height: 20px;
         padding: 20px;
         color: white;
-        background-image: linear-gradient(45deg, #34495e 25%, transparent 25%),
+        
+        bakground-image: linear-gradient(45deg, #34495e 25%, transparent 25%),
         linear-gradient(-45deg, #34495e 25%, transparent 25%),
         linear-gradient(135deg, #34495e 25%, transparent 25%),
         linear-gradient(-135deg, #34495e 25%, transparent 25%);
@@ -87,6 +87,31 @@
         background-color: rgba(241, 196, 15, 0.1);
         border-radius: 5px;
         box-shadow: 0 0 3px #cccccc;
+      }
+      
+      .about-me::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      .profile {
+        float: left;
+        width: 51%;
+        min-height: 100px;
+        padding: 2%;
+        background-color: rgba(243, 156, 18, 0.1);
+        border-radius: 5px;
+      }
+      
+      .last-actions {
+        float: right;
+        width: 40%;
+        min-height: 100px;
+        background: #f1c40f;
+        border: 5px solid white;
+        border-bottom-width: 15px;
+        box-shadow: 0 0 8px -1px #f39c12;
       }
       
       .posts {
@@ -153,7 +178,12 @@
     </header>
     <main>
       <article class="about-me">
-        Обо мне
+        <section class="profile">
+          Личная информация
+        </section>
+        <aside class="last-actions">
+          Последняя активность
+        </aside>
       </article>
       <section class="posts">
         Последние посты

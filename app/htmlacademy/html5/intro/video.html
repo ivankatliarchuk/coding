@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Использование нестандартных шрифтов</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Видео. Тег video</title>
     <base href="https://htmlacademy.ru">
-    <!--<link href="//fonts.googleapis.com/css?family=PT+Sans:400&subset=cyrillic" rel="stylesheet" type="text/css">-->
     <style>
-     @font-face {
+      @font-face {
+        font-weight: 400;
         font-family: "Roboto";
         font-style: normal;
-        font-weight: 400;
-        src:
-          local("Roboto Regular"),
-          local("Roboto-Regular"),
-          url("https://htmlacademy.ru/assets/course73/roboto.woff") format("woff");
+        src: local("Roboto Regular"),
+        local("Roboto-Regular"),
+        url("/assets/course73/roboto.woff") format("woff");
       }
+      
       html,
       body {
         margin: 0;
         padding: 0;
         font-size: 100%;
+        font-family: "Roboto", sans-serif;
         color: white;
         background-color: #2c3e50;
-        font-family: "Roboto", "Arial", sans-serif;
+      }
+      
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: #c0392b;
+      }
+      
+      code {
+        padding: 0.2em 0.4em;
+        font-weight: bold;
+        color: #c0392b;
+        background: white;
+        box-shadow: 0 0 2px #cccccc;
       }
       
       /* Header */
@@ -80,21 +94,45 @@
         clear: both;
       }
       
-      .about-me {
-        min-height: 100px;
+      .post {
         margin: 0 20px;
+      }
+      
+      .post header {
+        min-height: 50px;
+        margin-bottom: 1em;
+      }
+      
+      .post header h1 {
+        margin: 0;
+      }
+      
+      .post header time {
+        font-size: 11px;
+        color: #999999;
+      }
+      
+      .post .intro {
+        margin: 1em 0;
         padding: 10px;
         background-color: rgba(241, 196, 15, 0.1);
         border-radius: 5px;
-        box-shadow: 0 0 3px #cccccc;
       }
       
-      .posts {
-        min-height: 50px;
-        margin: 20px 0;
-        padding: 20px;
-        background: #f5f5f5;
-        box-shadow: 0 0 5px #cccccc;
+      .post .intro p {
+        margin: 0;
+      }
+      
+      .post .content {
+        min-height: 200px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      
+      .post .content h2 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 18px;
       }
       
       /* Footer */
@@ -136,6 +174,11 @@
         padding-top: 20px;
         font-size: 12px;
       }
+      .post audio {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+
     </style>
   </head>
   <body>
@@ -152,12 +195,31 @@
       </nav>
     </header>
     <main>
-      <article class="about-me">
-        Обо мне
+      <article class="post">
+        <header>
+          <h1>UX-тестирование</h1>
+          <time datetime="2014-04-10T15:25:00">
+            10 апреля 2014
+          </time>
+        </header>
+        <section class="intro">
+          <p>Записали процесс тестирования пользовательских интерфейсов. Очень рекомендую к просмотру.</p>
+        </section>
+        <section class="content">
+          <!-- содержание поста -->
+          <video controls preload="metadata" width="400" height="225">
+            <source src="/assets/course73/uxtesting.mp4" type="video/mp4">
+            <source src="/assets/course73/uxtesting.ogv" type="video/ogg">
+            <source src="/assets/course73/uxtesting.webm" type="video/webm">
+          </video>
+          
+          <audio controls preload="metadata">
+            <source src="/assets/course73/sound.mp3" type="audio/mpeg">
+            <source src="/assets/course73/sound.oga" type="audio/ogg">
+          </audio>
+        </section>
+        
       </article>
-      <section class="posts">
-        Последние посты
-      </section>
     </main>
     <footer class="page-footer">
       <section class="info">
