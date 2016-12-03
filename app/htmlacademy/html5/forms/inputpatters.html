@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/course74/keksik-style.css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #cccccc;
+      }
+  
+      fieldset {
+        padding: 10px;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+      }
+  
+      fieldset legend {
+        color: #34495e;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        width: 95%;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+  
+      input {
+        padding: 2px 5px;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
+  
+      input[type="submit"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        background: #2c3e50;
+      }
+  
+      .buttons {
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      main {
+        min-height: 400px;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Форма личных данных</header>
+    <main>
+      <form action="/echo" method="post">
+        <fieldset>
+          <legend>Заявление на получение визы</legend>
+          <label for="passport">Номер котопаспорта</label>
+          <!-- Текстовое поле ввода -->
+          <input type="text" id="passport" name="passport" pattern="[0-9]{3}-[0-9]{5}" required>
+        </fieldset>
+        <div class="buttons">
+          <input type="submit" value="Оформить">
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>
