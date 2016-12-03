@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Поля ввода адресов сайтов и email</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/course74/keksik-style.css">
+    <base href="https://htmlacademy.ru">
+		<style>
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px #cccccc;
+      }
+      
+      fieldset {
+        padding: 10px;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+      }
+      
+      fieldset legend {
+        color: #34495e;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input {
+        width: 95%;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+      
+      input {
+        padding: 2px 5px;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
+      
+      input[type="submit"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        background: #2c3e50;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      .buttons {
+        margin-top: 10px;
+        text-align: center;
+      }
+      
+      main {
+        min-height: 400px;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Форма личных данных</header>
+    <main>
+      <form action="/echo" method="post">
+        <fieldset>
+          <legend>Заявление на получение визы</legend>
+          <label for="passport">Номер котопаспорта</label>
+          <input type="text" id="passport" name="passport" pattern="[0-9]{3}-[0-9]{5}" placeholder="Формат номера XXX-XXXXX">
+          <label for="tel">Номер телефона</label>
+          <input type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Формат номера X-XXX-XXX">
+          <div class="half-width">
+            <label for="email">Email</label>
+            <!-- Поле ввода электронной почты -->
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="half-width">
+            <label for="url">Личный сайт</label>
+            <!-- Поле ввода адреса сайта -->
+            <input type="url" required id="url" name="url">
+          </div>
+        </fieldset>
+        <div class="buttons">
+          <input type="submit" value="Оформить">
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>
