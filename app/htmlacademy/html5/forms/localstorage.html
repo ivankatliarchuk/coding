@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>localStorage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/course74/keksik-style.css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      form {
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #cccccc;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      textarea {
+        width: 95%;
+        margin-bottom:10px;
+        padding: 2px 5px;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+      }
+  
+      input[type="submit"] {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        background: #2c3e50;
+        border: none;
+        border-radius: 5px;
+      }
+  
+      .buttons {
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Путевые заметки</header>
+    <main>
+      <form action="/echo" method="post">
+        <label for="note">Текст заметки</label>
+        <textarea id="note" name="note" rows="9">Пойми, в Норвегии только и говорят, что о море. Как оно бесконечно прекрасно… О закате, который они видели… О том, как солнце, погружаясь в волны, стало алым как кровь. И почувствовали, что море впитало энергию светила в себя, и солнце было укрощено, и огонь уже догорал в глубине.</textarea>
+        <div class="buttons">
+          <input type="submit" value="Сохранить">
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+    
+	<script>
+		if (window.localStorage) {
+			var elements = document.querySelectorAll('[name]');
+
+			for (var i = 0, length = elements.length; i < length; i++) {
+				(function(element) {
+					var name = element.getAttribute('name');
+
+					element.value = localStorage.getItem(name) || '';
+
+					element.onkeyup = function() {
+						localStorage.setItem(name, element.value);
+					};
+				})(elements[i]);
+			}
+		}
+    
+  
+	</script>
+    <!--<script>-->
+    <!--if (window.localStorage) {-->
+    <!--var elements = document.querySelectorAll('[name]');-->
+    <!---->
+    <!--for (var i = 0, length = elements.length; i < length; i++) {-->
+    <!--(function(element) {-->
+    <!--var name = element.getAttribute('name');-->
+    <!---->
+    <!--element.value = localStorage.getItem(name) || '';-->
+    <!---->
+    <!--element.onkeyup = function() {-->
+    <!--localStorage.setItem(name, element.value);-->
+    <!--};-->
+    <!--})(elements[i]);-->
+    <!--}-->
+    <!--}-->
+    <!--</script>-->
+	</body>
+</html>

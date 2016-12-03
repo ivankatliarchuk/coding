@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Управление автозаполнением полей</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/course74/keksik-style.css">
+    <base href="https://htmlacademy.ru">
+    <style>
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px #cccccc;
+      }
+  
+      fieldset {
+        padding: 10px;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+      }
+  
+      fieldset legend {
+        color: #34495e;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      input,
+      select {
+        width: 95%;
+        height: 24px;
+        margin-bottom: 10px;
+        padding: 2px 5px;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
+  
+      select[multiple] {
+        height: 60px;
+      }
+  
+      input[type="submit"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        background: #2c3e50;
+        border: none;
+        border-radius: 5px;
+      }
+  
+      .one-third-width {
+        width: 33.3%;
+      }
+  
+      .two-third-width {
+        width: 66.6%;
+      }
+  
+      .half-width {
+        width: 50%;
+      }
+  
+      .one-third-width,
+      .two-third-width,
+      .half-width {
+        display: inline-block;
+        margin-right: -4px;
+      }
+  
+      .one-third-width input,
+      .two-third-width select {
+        width: 80%;
+      }
+  
+      .half-width input {
+        width: 80%;
+      }
+  
+      .half-width input[type="range"] {
+        width: 65%;
+      }
+  
+      .buttons {
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      main {
+        min-height: 400px;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Форма личных данных</header>
+    <main>
+      <form action="/echo" method="post">
+        <fieldset>
+          <legend>Заявление на получение визы</legend>
+          <label for="passport">Номер котопаспорта</label>
+          <input type="text" id="passport" name="passport" pattern="[0-9]{3}-[0-9]{5}" placeholder="Формат номера XXX-XXXXX">
+          <label for="tel">Номер телефона</label>
+          <input type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Формат номера X-XXX-XXX">
+          <div class="half-width">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="on">
+          </div>
+          <div class="half-width">
+            <label for="url">Личный сайт</label>
+            <input type="url" id="url" name="url">
+          </div>
+          <div class="one-third-width">
+            <label for="color">Окрас</label>
+            <input type="color" id="color" name="color">
+          </div>
+          <div class="two-third-width">
+            <label for="food">Любимая еда</label>
+            <select id="food" name="food">
+              <optgroup label="Вкуснятина">
+                <option value="meat">Мясо</option>
+                <option value="fish">Рыба</option>
+                <option value="chi">Курочка</option>
+                <option value="ind">Индейка</option>
+                <option value="mice">Мыши</option>
+              </optgroup>
+              <optgroup label="Сойдёт">
+                <option value="milk">Молоко</option>
+                <option value="kef">Кефир</option>
+                <option value="water">Вода</option>
+                <option value="smet">Сметана</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+        <div class="buttons">
+          <input type="submit" value="Оформить">
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>
