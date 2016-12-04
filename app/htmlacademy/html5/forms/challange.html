@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Испытание: через тернии к звёздам</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/course74/exam.css">
+    <base href="https://htmlacademy.ru">
+		<style>
+      form {
+        width: 450px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #cccccc;
+      }
+      
+      fieldset {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+      }
+      
+      fieldset legend {
+        color: #34495e;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input,
+      select,
+      output,
+      textarea {
+        width: 95%;
+        margin: 0 0 10px 0;
+        padding: 2px 5px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
+      
+      input,
+      select {
+        height: 24px;
+      }
+      
+      output {
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        margin: 0 5px 10px 0;
+        text-align: center;
+      }
+      
+      select[multiple] {
+        height: 100px;
+      }
+      
+      input[type="submit"],
+      input[type="reset"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        background: red;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      input[disabled] {
+        background-color: #ebebe3;
+      }
+      
+      .one-third-width {
+        width: 33.3%;
+      }
+      
+      .two-third-width {
+        width: 66.6%;
+      }
+      
+      .half-width {
+        width: 50%;
+      }
+      
+      .one-third-width,
+      .two-third-width,
+      .half-width {
+        display: inline-block;
+        margin-right: -4px;
+      }
+      
+      .one-third-width input,
+      .two-third-width select {
+        width: 80%;
+      }
+      
+      .half-width input,
+      .half-width select {
+        width: 80%;
+      }
+      
+      .half-width input[type="range"] {
+        width: 65%;
+      }
+      
+      .output-area {
+        vertical-align: top;
+      }
+      
+      .buttons {
+        margin-top: 10px;
+        text-align: center;
+      }
+      
+      body {
+        min-width: 553px;
+      }
+      
+      main {
+        min-height: 400px;
+      }
+
+
+      input[type="submit"],
+      button {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 6px 15px;
+        color: #ffffff;
+        background: #2c3e50;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+	</head>
+	<body>
+    <header class="page-header">Форма отзыва</header>
+    <main>
+      <form action="/echo" method="post" oninput="rangeoutput.value=rating.value">
+        <fieldset>
+          <legend>Личные данные</legend>
+          <div class="half-width">
+            <label for="id">ID отзыва</label>
+            <input type="text" value="12345" disabled id="id" name="id">
+          </div>
+          <div class="half-width">
+            <label for="name">Имя путешественника</label>
+            <input type="text" value="Кекс" name="name" id="name">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Отзыв о поездке</legend>
+          <div class="half-width">
+            <label for="country">Страна визита</label>
+            <input type="search" id="country" name="country" value="Норвегия">
+          </div>
+          <div class="half-width">
+            <label for="city">Город</label>
+            <select id="city" name="city">
+              <option value="Осло" selected>Осло</option>
+            </select>
+          </div>
+          <div class="half-width">
+            <label for="rating">Оценка поездки</label>
+            0
+            <input type="range" step="1" id="rating" value="10" max="10" min="1" name="rating">
+            10
+          </div>
+          <div class="half-width output-area">
+            <output name="rangeoutput">10</output>
+          </div>
+          <label for="review">Текст отзыва</label>
+          <textarea id="review" name="review" rows="5">Это было просто мяу!</textarea>
+         
+        </fieldset>
+        <fieldset>
+          <legend>Оценка отеля</legend>
+          <div class="half-width">
+            <label for="hotel">Название отеля</label>
+            <input type="text" readonly placeholder="Название по-английски" id="hotel" name="hotel">
+          </div>
+          <div class="half-width">
+            <label for="arrival_date">Дата въезда</label>
+            <input type="text" readonly placeholder="В формате дд-ьь-гггг" id="arrival_date" name="date">
+          </div>
+          <div class="one-third-width">
+            <label for="color">Цвет кроватки</label>
+            <input type="color" id="color" value="#FF0000" disabled>
+          </div>
+          <div class="two-third-width">
+            <label for="dish_rating">Оценка обедов</label>
+            <select id="dish_rating" name="dish-rating">
+              <option value="Осло" selected>Подушечки оближешь</option>
+            </select>
+          </div>
+          <label for="fish">Самая вкусная рыба</label>
+          <select id="fish" multiple>
+            <option selected>Норвежский лосось</option>
+            <option >Зубатка</option>
+            <option selected>Морской окунь</option>
+            <option >Карась</option>
+            <option >Зекральный карп</option>
+          </select>
+          
+        </fieldset>
+  
+        <div class="buttons">
+          <button type="submit">Оценить</button>
+          <button type="reset">Сбросить</button>
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+	</body>
+</html>
